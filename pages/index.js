@@ -24,7 +24,7 @@ export default function Home() {
           <p className="font-semibold text-[40px] text-[#444444]">
             I&apos;m a Front-end Developer.
           </p>
-          <div className="w-full mt-4 flex flex-col gap-2">
+          <div className="w-full mt-4 flex flex-col gap-2 text-[#444444]">
             <div className="flex gap-4 font-regular text-lg items-center">
               <FaBirthdayCake className="text-[#444] text-[24px]" />
               <p>18.06.1999</p>
