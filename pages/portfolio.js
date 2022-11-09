@@ -63,6 +63,14 @@ export default function Portfolio() {
       label: "Private",
       link: "",
     },
+    {
+      title: "Collector App",
+      image: "/images/portfolio/collector-app.jpg",
+      style:
+        "text-[#142a64] border-[#142a64] shadow-md shadow-[#142a6480] hover:bg-[#142a64] hover:text-white",
+      label: "Private",
+      link: "",
+    },
   ];
 
   const wordpressItems = [
@@ -185,14 +193,14 @@ export default function Portfolio() {
           {portfolioItems.map((item, index) => (
             <div
               key={index}
-              className="w-full h-full flex flex-col items-center"
+              className="w-full h-full flex flex-col items-center overflow-hidden py-2"
             >
               <Image
                 alt={item.title}
                 src={item.image}
-                width="600"
-                height="400"
-                className="rounded-2xl h-full object-cover"
+                width="800"
+                height="533"
+                className="rounded-2xl object-cover h-full"
               />
               <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
                 <h2 className="w-auto truncate text-3xl font-bold text-[#444444]">
@@ -215,14 +223,14 @@ export default function Portfolio() {
           {wordpressItems.map((item, index) => (
             <div
               key={index}
-              className="w-full flex flex-col items-center justify-between"
+              className="w-full h-full flex flex-col items-center overflow-hidden py-2"
             >
               <Image
                 alt={item.title}
                 src={item.image}
-                width="600"
-                height="400"
-                className="rounded-2xl h-full object-cover"
+                width="800"
+                height="533"
+                className="rounded-2xl object-cover h-full"
               />
               <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
                 <h2 className="w-auto truncate text-3xl font-bold text-[#444444]">
@@ -243,13 +251,16 @@ export default function Portfolio() {
       {activeTab === "games" && (
         <div className="w-10/12 lg:w-full h-full container mx-auto grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 gap-16 pb-20">
           {gamesItems.map((item, index) => (
-            <div key={index} className="w-full flex flex-col items-center">
+            <div
+              key={index}
+              className="w-full h-full flex flex-col items-center overflow-hidden py-2"
+            >
               <Image
                 alt={item.title}
                 src={item.image}
-                width="600"
-                height="400"
-                className="rounded-2xl h-full object-cover"
+                width="800"
+                height="533"
+                className="rounded-2xl object-cover h-full"
               />
               <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
                 <h2 className="w-auto truncate text-3xl font-bold text-[#444444]">
