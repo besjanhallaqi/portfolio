@@ -193,7 +193,7 @@ export default function Portfolio() {
           {portfolioItems.map((item, index) => (
             <div
               key={index}
-              className="w-full h-full flex flex-col items-center overflow-hidden py-2"
+              className="w-full h-full flex flex-col items-center justify-between"
             >
               <Image
                 alt={item.title}
@@ -203,7 +203,7 @@ export default function Portfolio() {
                 className="rounded-2xl object-cover h-full"
               />
               <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
-                <h2 className="w-auto truncate text-3xl font-bold text-[#444444]">
+                <h2 className="lg:w-auto xl:truncate text-3xl font-bold text-[#444444]">
                   {item.title}
                 </h2>
                 <Link
@@ -223,7 +223,7 @@ export default function Portfolio() {
           {wordpressItems.map((item, index) => (
             <div
               key={index}
-              className="w-full h-full flex flex-col items-center overflow-hidden py-2"
+              className="w-full h-full flex flex-col items-center justify-between"
             >
               <Image
                 alt={item.title}
@@ -233,7 +233,7 @@ export default function Portfolio() {
                 className="rounded-2xl object-cover h-full"
               />
               <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
-                <h2 className="w-auto truncate text-3xl font-bold text-[#444444]">
+                <h2 className="lg:w-auto xl:truncate text-3xl font-bold text-[#444444]">
                   {item.title}
                 </h2>
                 <Link
@@ -253,7 +253,7 @@ export default function Portfolio() {
           {gamesItems.map((item, index) => (
             <div
               key={index}
-              className="w-full h-full flex flex-col items-center overflow-hidden py-2"
+              className="w-full h-full flex flex-col items-center justify-between"
             >
               <Image
                 alt={item.title}
@@ -263,7 +263,7 @@ export default function Portfolio() {
                 className="rounded-2xl object-cover h-full"
               />
               <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
-                <h2 className="w-auto truncate text-3xl font-bold text-[#444444]">
+                <h2 className="lg:w-auto xl:truncate text-3xl font-bold text-[#444444]">
                   {item.title}
                 </h2>
                 <Link

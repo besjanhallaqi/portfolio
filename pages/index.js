@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <DefaultLayout>
       <div className="w-10/12 mx-auto py-24 lg:py-0 lg:w-full h-full flex flex-col lg:flex-row gap-12 items-center justify-center">
-        <div className="w-10/12 md:w-96 overflow-hidden aspect-square border-8 border-[#b8b8b8] rounded-full bg-[#b8b8b8]">
+        <div className="w-auto m-4 md:m-0 md:w-96 overflow-hidden aspect-square border-8 border-[#b8b8b8] rounded-full bg-[#b8b8b8]">
           <Image
             width={600}
             height={600}
