@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
-export default function DefaultLayout({ children }) {
+export default function DefaultLayout({ footerStyle, children }) {
   const router = useRouter();
 
   const menu = [
@@ -51,7 +51,9 @@ export default function DefaultLayout({ children }) {
         ))}
       </div>
       {children}
-      <div className="w-full flex items-center justify-center pb-8 gap-6">
+      <div
+        className={`${footerStyle} w-full flex items-center justify-center pb-8 gap-6`}
+      >
         {footer.map((item, index) => (
           <Link key={index} href={item.link} target="_blank">
             {item.content}

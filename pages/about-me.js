@@ -183,41 +183,6 @@ export default function AboutMe() {
             ))}
           </div>
         </div>
-        <div className="w-full flex flex-col gap-6">
-          <h2 className="text-[36px] font-bold text-[#444] uppercase">Games</h2>
-          <div className="w-full flex flex-wrap justify-center xl:justify-start gap-8">
-            <div className="aspect-video border-2 text-2xl border-[#444] text-[#444] font-semibold flex flex-col rounded-xl">
-              <Link
-                href="https://rrath-rrath.netlify.app/"
-                target="_blank"
-                className="p-6 flex flex-col items-center gap-4 hover:underline"
-              >
-                <Image
-                  src="/images/games/4inrow.png"
-                  width="300"
-                  height="400"
-                  className="object-cover rounded-lg"
-                />
-                <p>4 in a row</p>
-              </Link>
-            </div>
-            <div className="aspect-video border-2 text-2xl border-[#444] text-[#444] font-semibold flex flex-col rounded-xl">
-              <Link
-                href="https://luaj.live/"
-                target="_blank"
-                className="p-6 flex flex-col items-center gap-4 hover:underline"
-              >
-                <Image
-                  src="/images/games/wordle.png"
-                  width="300"
-                  height="400"
-                  className="object-cover"
-                />
-                <p>Wordle</p>
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </DefaultLayout>
   );
