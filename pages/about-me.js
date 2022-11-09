@@ -203,7 +203,7 @@ export default function AboutMe() {
             </div>
             <div className="aspect-video border-2 text-2xl border-[#444] text-[#444] font-semibold flex flex-col rounded-xl">
               <Link
-                href="https://rrath-rrath.netlify.app/"
+                href="https://luaj.live/"
                 target="_blank"
                 className="p-6 flex flex-col items-center gap-4 hover:underline"
               >
