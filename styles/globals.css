@@ -8,10 +8,6 @@
   src: url("../public/fonts/Jost/Jost-Regular.ttf");
 }
 @font-face {
-  font-family: "light";
-  src: url("../public/fonts/Jost/Jost-Light.ttf");
-}
-@font-face {
   font-family: "bold";
   src: url("../public/fonts/Jost/Jost-Bold.ttf");
 }
@@ -19,11 +15,6 @@
 @font-face {
   font-family: "semibold";
   src: url("../public/fonts/Jost/Jost-SemiBold.ttf");
-}
-
-@font-face {
-  font-family: "italic";
-  src: url("../public/fonts/Jost/Jost-Italic.ttf");
 }
 
 html,
@@ -40,14 +31,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
