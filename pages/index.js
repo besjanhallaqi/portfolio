@@ -39,11 +39,11 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <a
+                target="_blank"
                 className="py-2 px-4 border-2 border-[#444] rounded-lg text-lg font-semibold text-[#444] hover:border-white hover:bg-[#b8b8b8] hover:text-white"
                 href="../cv/CV-Besjan Hallaqi.pdf"
-                download="CV-Besjan Hallaqi"
               >
-                Download CV
+                View CV
               </a>
             </div>
           </div>
