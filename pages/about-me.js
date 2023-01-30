@@ -84,7 +84,35 @@ export default function AboutMe() {
           <h2 className="text-[36px] font-bold text-[#444] uppercase">
             Experience
           </h2>
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-32">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6 lg:gap-y-12 lg:gap-x-32">
+            <div className="w-full flex flex-col text-[#444]">
+              <Link
+                href="https://www.axians-kosovo.com/"
+                target="_blank"
+                className="font-semibold text-[26px] hover:underline"
+              >
+                Axians Kosovo
+              </Link>
+              <p className="font-semibold">
+                <span className="font-regular text-[13px]">From: </span>02/2023{" "}
+                <span className="font-regular text-[13px]">To: </span>Current
+              </p>
+              <ul className="list-disc list-inside pl-2 mt-2">
+                <li>
+                  Proficient in HTML, CSS, TailwindCSS, ReactJS, NextJS,
+                  TypeScript, and other relevant web design coding languages
+                </li>
+                <li>Creating and testing applications for websites</li>
+                <li>Collaboration with team</li>
+                <li>Working with graphics and other designers</li>
+                <li>
+                  Finding solutions for a different variations of website
+                  problems
+                </li>
+                <li>Maintaining and updating websites</li>
+                <li>Staying up-to-date on technology</li>
+              </ul>
+            </div>
             <div className="w-full flex flex-col text-[#444]">
               <Link
                 href="https://sponex.ch/"
@@ -95,7 +123,7 @@ export default function AboutMe() {
               </Link>
               <p className="font-semibold">
                 <span className="font-regular text-[13px]">From: </span>10/2021{" "}
-                <span className="font-regular text-[13px]">To: </span>Current
+                <span className="font-regular text-[13px]">To: </span>12/2022
               </p>
               <ul className="list-disc list-inside pl-2 mt-2">
                 <li>
@@ -172,7 +200,7 @@ export default function AboutMe() {
                 className="border-2 border-[#444] text-[#444] font-semibold flex flex-col rounded-xl"
               >
                 <Link
-                  href="/"
+                  href={item.link}
                   target={item.link === "" ? "" : "_blank"}
                   className="p-6 flex flex-col items-center gap-2 hover:underline"
                 >
