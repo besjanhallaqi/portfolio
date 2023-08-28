@@ -21,7 +21,7 @@ export default function Portfolio() {
       style:
         "text-[#d8d8d8] border-[#d8d8d8] shadow-md shadow-[#d8d8d880] hover:bg-[#d8d8d8] hover:text-white",
       label: "Live Demo",
-      link: "https://dea-preview.netlify.app/",
+      link: "https://deastudio.de/",
     },
     {
       title: "Creation Bois",
@@ -36,8 +36,8 @@ export default function Portfolio() {
       image: "/images/portfolio/f4c.jpg",
       style:
         "text-[#b34141] border-[#b34141] shadow-md shadow-[#b3414180] hover:bg-[#b34141] hover:text-white",
-      label: "Private",
-      link: "",
+      label: "Live Demo",
+      link: "https://fight4cure.vercel.app/",
     },
     {
       title: "Strofulla",
@@ -52,16 +52,16 @@ export default function Portfolio() {
       image: "/images/portfolio/neuron-cover.jpg",
       style:
         "text-[#c3cbd3] border-[#c3cbd3] shadow-md shadow-[#c3cbd380] hover:bg-[#c3cbd3] hover:text-white",
-      label: "Private",
-      link: "",
+      label: "Live Demo",
+      link: "https://neuronvasgroup.com/",
     },
     {
       title: "Zoomtrip",
       image: "/images/portfolio/zoomtrip-cover.jpg",
       style:
         "text-[#6fd8bc] border-[#6fd8bc] shadow-md shadow-[#6fd8bc80] hover:bg-[#6fd8bc] hover:text-white",
-      label: "Private",
-      link: "",
+      label: "Live Demo",
+      link: "https://zoomtrip.vercel.app/",
     },
     {
       title: "Collector App",
@@ -148,6 +148,14 @@ export default function Portfolio() {
         "text-[#b8babc] border-[#b8babc] shadow-md shadow-[#b8babc80] hover:bg-[#b8babc] hover:text-white",
       label: "Live Demo",
       link: "https://luaj.live/",
+    },
+    {
+      title: "Checkers",
+      image: "/images/games/checkers.png",
+      style:
+        "text-[#282929] border-[#282929] shadow-md shadow-[#28292980] hover:bg-[#282929] hover:text-white",
+      label: "Live Demo",
+      link: "https://checkers-king.netlify.app/",
     },
   ];
 

@@ -1,18 +1,17 @@
 import Link from "next/link";
 import DefaultLayout from "../layouts/DefaultLayout";
-import { FaReact } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { FaReact, FaWordpressSimple, FaPhp, FaBootstrap } from "react-icons/fa";
+import {
+  SiMysql,
+  SiCss3,
+  SiHtml5,
+  SiTailwindcss,
+  SiJavascript,
+  SiThreedotjs,
+  SiTypescript,
+  SiMui,
+} from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiThreedotjs } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { FaWordpressSimple } from "react-icons/fa";
-import { SiHtml5 } from "react-icons/si";
-import { SiCss3 } from "react-icons/si";
-import { FaPhp } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
-import { FaBootstrap } from "react-icons/fa";
-import Image from "next/image";
 
 export default function AboutMe() {
   const skills = [
@@ -45,6 +44,11 @@ export default function AboutMe() {
       title: "TailwindCSS",
       link: "https://tailwindcss.com/",
       svg: <SiTailwindcss className="text-[#444] text-[32px]" />,
+    },
+    {
+      title: "Material UI",
+      link: "https://mui.com/",
+      svg: <SiMui className="text-[#444] text-[32px]" />,
     },
     {
       title: "WordPress",
@@ -99,18 +103,18 @@ export default function AboutMe() {
               </p>
               <ul className="list-disc list-inside pl-2 mt-2">
                 <li>
-                  Proficient in HTML, CSS, TailwindCSS, ReactJS, NextJS,
-                  TypeScript, and other relevant web design coding languages
+                  Working with ReactJS, TypeScript and Material UI for better
+                  user experience
                 </li>
-                <li>Creating and testing applications for websites</li>
+                <li>Creating and testing applications</li>
                 <li>Collaboration with team</li>
-                <li>Working with graphics and other designers</li>
+                <li>Working with Scrum</li>
+                <li>Managing successful sprints</li>
                 <li>
                   Finding solutions for a different variations of website
                   problems
                 </li>
                 <li>Maintaining and updating websites</li>
-                <li>Staying up-to-date on technology</li>
               </ul>
             </div>
             <div className="w-full flex flex-col text-[#444]">
@@ -178,7 +182,7 @@ export default function AboutMe() {
             </Link>
             <p className="font-semibold">
               <span className="font-regular text-[13px]">From: </span>09/2017{" "}
-              <span className="font-regular text-[13px]">To: </span>Current
+              <span className="font-regular text-[13px]">To: </span>08/2023
             </p>
             <p className="font-semibold text-[18px]">
               Bachelor for Computer Science and Engineering
@@ -193,7 +197,7 @@ export default function AboutMe() {
           <h2 className="text-[36px] font-bold text-[#444] uppercase">
             Skills
           </h2>
-          <div className="w-full flex flex-wrap justify-center xl:justify-start gap-4">
+          <div className="w-full flex flex-wrap justify-center gap-4">
             {skills.map((item, index) => (
               <div
                 key={index}
