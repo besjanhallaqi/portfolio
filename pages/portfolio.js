@@ -153,15 +153,23 @@ export default function Portfolio() {
       title: "Checkers",
       image: "/images/games/checkers.png",
       style:
-        "text-[#282929] border-[#282929] shadow-md shadow-[#28292980] hover:bg-[#282929] hover:text-white",
+        "text-[#ccc3c2] border-[#ccc3c2] shadow-md shadow-[#ccc3c2] hover:bg-[#ccc3c2] hover:text-white",
       label: "Live Demo",
       link: "https://checkers-king.netlify.app/",
+    },
+    {
+      title: "Sudoku",
+      image: "/images/games/sudoku.png",
+      style:
+        "text-[#bdbdbd] border-[#dee2e3] shadow-md shadow-[#dee2e3] hover:bg-[#0e0e0ee0] hover:text-white",
+      label: "Live Demo",
+      link: "https://sudoku-ai.netlify.app/",
     },
   ];
 
   return (
     <DefaultLayout footerStyle="mt-auto">
-      <div className="w-10/12 lg:w-full h-full container mx-auto flex flex-row overflow-x-auto gap-6 pt-20 pb-2 mb-6 lg:mb-12">
+      <div className="w-10/12 lg:w-full h-full container mx-auto flex flex-row overflow-x-auto gap-2 lg:gap-6 pt-20 pb-2 mb-6 lg:mb-12">
         <button
           type="button"
           onClick={() => setActiveTab("webs")}

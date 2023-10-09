@@ -34,7 +34,7 @@ export default function DefaultLayout({ footerStyle, children }) {
   ];
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-between bg-[#f8f8f8]">
+    <div className="relative w-full min-h-screen flex flex-col justify-between bg-[#f8f8f8] lg:px-12">
       <div className="w-full flex flex-wrap items-center justify-center pt-8 gap-8 lg:gap-20 text-xl font-regular text-[#444444]">
         {menu.map((item, index) => (
           <Link
