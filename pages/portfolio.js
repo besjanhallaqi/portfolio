@@ -52,8 +52,8 @@ export default function Portfolio() {
       image: "/images/portfolio/neuron-cover.jpg",
       style:
         "text-[#c3cbd3] border-[#c3cbd3] shadow-md shadow-[#c3cbd380] hover:bg-[#c3cbd3] hover:text-white",
-      label: "Live Demo",
-      link: "https://neuronvasgroup.com/",
+      label: "Private",
+      link: "",
     },
     {
       title: "Zoomtrip",

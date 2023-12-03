@@ -185,7 +185,7 @@ export default function AboutMe() {
               <span className="font-regular text-[13px]">To: </span>08/2023
             </p>
             <p className="font-semibold text-[18px]">
-              Bachelor for Computer Science and Engineering
+              Bachelor on Computer Science and Engineering
             </p>
             <p>
               <span className="font-semibold text-[13px]">Address:</span> Lagjia
