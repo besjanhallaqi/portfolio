@@ -165,6 +165,14 @@ export default function Portfolio() {
       label: "Live Demo",
       link: "https://sudoku-ai.netlify.app/",
     },
+    {
+      title: "Dart",
+      image: "/images/games/dart.png",
+      style:
+        "text-[#010101] border-[#9a9a9a] shadow-md shadow-[#9a9a9a] hover:bg-[#1f1f1fe0] hover:text-white",
+      label: "Live Demo",
+      link: "https://dartstrike.netlify.app/",
+    },
   ];
 
   return (
