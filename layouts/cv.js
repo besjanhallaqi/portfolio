@@ -5,6 +5,17 @@ export default function CV() {
   const downloadCV = useRef();
   const handleDownloadCV = useReactToPrint({
     content: () => downloadCV.current,
+    pageStyle: `
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    @media print {
+      body {
+        background-color: #fff;
+      }
+    }
+  `,
   });
 
   const cvJehona = {
@@ -105,8 +116,22 @@ export default function CV() {
       "Passionate Front-End Developer with expertise in React.js, dedicated to creating responsive and user-friendly web applications. Proficient in modern web technologies, I blend creativity and technical prowess to deliver engaging digital experiences. Committed to continuous learning and collaboration with cross-functional teams to drive innovation in web development.",
     experience: [
       {
-        from: "02/2023",
+        from: "03/2024",
         to: "Current",
+        company_name: "Visiar HealthCare",
+        your_role: "Front-end developer",
+        your_responsibilities: [
+          "Working with ReactJS, NextJS, TypeScript and TailwindCSS for better user experience",
+          "Creating scalable applications",
+          "Collaboration with team",
+          "Working with Scrum",
+          "Managing successful sprints",
+          "Finding solutions for a different variations of website problems",
+        ],
+      },
+      {
+        from: "02/2023",
+        to: "03/2024",
         company_name: "Axians Kosovo",
         your_role: "React developer",
         your_responsibilities: [
@@ -310,6 +335,20 @@ export default function CV() {
                 {item.level}
               </p>
             ))}
+            <p className="italic font-semibold mt-4 text-2xl">Education</p>
+            {cv.education.map((item, index) => (
+              <div key={index} className={`${index === 0 ? "mt-1" : "mt-3"} `}>
+                <p>
+                  <b>{item.degree}</b> for <b>{item.education_title}</b>
+                </p>
+                <p>
+                  At <b>{item.college_name}</b>
+                </p>
+                <p>
+                  {item.from} - {item.to}
+                </p>
+              </div>
+            ))}
           </div>
           <div className="w-[65%] h-full pt-12 px-8 text-[#444]">
             <p className="italic tracking-wider leading-tight text-[56px] ">
@@ -343,20 +382,6 @@ export default function CV() {
                     )
                   )}
                 </ul>
-              </div>
-            ))}
-            <p className="italic font-semibold mt-4 text-2xl">Education</p>
-            {cv.education.map((item, index) => (
-              <div key={index} className={`${index === 0 ? "mt-1" : "mt-3"} `}>
-                <p>
-                  <b>{item.degree}</b> for <b>{item.education_title}</b>
-                </p>
-                <p>
-                  At <b>{item.college_name}</b>
-                </p>
-                <p>
-                  {item.from} - {item.to}
-                </p>
               </div>
             ))}
           </div>

@@ -81,6 +81,65 @@ export default function AboutMe() {
       svg: <FaBootstrap className="text-[#444] text-[32px]" />,
     },
   ];
+
+  const jobs = [
+    {
+      title: "Visiar HealthCare",
+      website: "https://visiar.nl/",
+      from: "03/2024",
+      to: "Current",
+      description: [
+        "Working with ReactJS, NextJS, TypeScript and TailwindCSS for better user experience",
+        "Creating scalable applications",
+        "Collaboration with team",
+        "Working with Scrum",
+        "Managing successful sprints",
+        "Finding solutions for a different variations of website problems",
+      ],
+    },
+    {
+      title: "Axians Kosovo",
+      website: "https://www.axians-kosovo.com/",
+      from: "02/2023",
+      to: "03/2024",
+      description: [
+        "Working with ReactJS, TypeScript and Material UI for better user experience",
+        "Creating and testing applications",
+        "Collaboration with team",
+        "Working with Scrum",
+        "Managing successful sprints",
+        "Finding solutions for a different variations of website problems",
+        "Maintaining and updating websites",
+      ],
+    },
+    {
+      title: "Sponex L.L.C.",
+      website: "https://sponex.ch/",
+      from: "10/2021",
+      to: "12/2022",
+      description: [
+        "Proficient in HTML, CSS, TailwindCSS, ReactJS, NextJS, TypeScript, and other relevant web design coding languages",
+        "Creating and testing applications for websites",
+        "Collaboration with team",
+        "Working with graphics and other designers",
+        "Finding solutions for a different variations of website problems",
+        "Maintaining and updating websites",
+        "Staying up-to-date on technology",
+      ],
+    },
+    {
+      title: "ProCredit Bank",
+      website: "https://www.procreditbank-kos.com/",
+      from: "07/2020",
+      to: "10/2020",
+      description: [
+        "Finished Internship for this department in bank",
+        "Created reports from database to the all departments in the bank",
+        "Used queries in MSSQL for generating reports",
+      ],
+    },
+  ];
+
   return (
     <DefaultLayout>
       <div className="w-10/12 lg:w-full h-full flex flex-col gap-20 py-20 container mx-auto">
@@ -89,83 +148,31 @@ export default function AboutMe() {
             Experience
           </h2>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6 lg:gap-y-12 lg:gap-x-32">
-            <div className="w-full flex flex-col text-[#444]">
-              <Link
-                href="https://www.axians-kosovo.com/"
-                target="_blank"
-                className="font-semibold text-[26px] hover:underline"
+            {jobs.map((item) => (
+              <div
+                key={item.title}
+                className="w-full flex flex-col text-[#444]"
               >
-                Axians Kosovo
-              </Link>
-              <p className="font-semibold">
-                <span className="font-regular text-[13px]">From: </span>02/2023{" "}
-                <span className="font-regular text-[13px]">To: </span>Current
-              </p>
-              <ul className="list-disc list-inside pl-2 mt-2">
-                <li>
-                  Working with ReactJS, TypeScript and Material UI for better
-                  user experience
-                </li>
-                <li>Creating and testing applications</li>
-                <li>Collaboration with team</li>
-                <li>Working with Scrum</li>
-                <li>Managing successful sprints</li>
-                <li>
-                  Finding solutions for a different variations of website
-                  problems
-                </li>
-                <li>Maintaining and updating websites</li>
-              </ul>
-            </div>
-            <div className="w-full flex flex-col text-[#444]">
-              <Link
-                href="https://sponex.ch/"
-                target="_blank"
-                className="font-semibold text-[26px] hover:underline"
-              >
-                Sponex L.L.C.
-              </Link>
-              <p className="font-semibold">
-                <span className="font-regular text-[13px]">From: </span>10/2021{" "}
-                <span className="font-regular text-[13px]">To: </span>12/2022
-              </p>
-              <ul className="list-disc list-inside pl-2 mt-2">
-                <li>
-                  Proficient in HTML, CSS, TailwindCSS, ReactJS, NextJS,
-                  TypeScript, and other relevant web design coding languages
-                </li>
-                <li>Creating and testing applications for websites</li>
-                <li>Collaboration with team</li>
-                <li>Working with graphics and other designers</li>
-                <li>
-                  Finding solutions for a different variations of website
-                  problems
-                </li>
-                <li>Maintaining and updating websites</li>
-                <li>Staying up-to-date on technology</li>
-              </ul>
-            </div>
-            <div className="w-full flex flex-col text-[#444]">
-              <Link
-                href="https://www.procreditbank-kos.com/"
-                target="_blank"
-                className="font-semibold text-[26px] hover:underline"
-              >
-                ProCredit Bank
-              </Link>
-              <p className="font-semibold">
-                <span className="font-regular text-[13px]">From: </span>07/2020{" "}
-                <span className="font-regular text-[13px]">To: </span>10/2020
-              </p>
-              <ul className="list-disc list-inside pl-2 mt-2">
-                <li>Finished Internship for this department in bank</li>
-                <li>
-                  Created reports from database to the all departments in the
-                  bank
-                </li>
-                <li>Used queries in MSSQL for generating reports</li>
-              </ul>
-            </div>
+                <Link
+                  href={item.website}
+                  target="_blank"
+                  className="font-semibold text-[26px] hover:underline"
+                >
+                  {item.title}
+                </Link>
+                <p className="font-semibold">
+                  <span className="font-regular text-[13px]">From: </span>
+                  {item.from}{" "}
+                  <span className="font-regular text-[13px]">To: </span>
+                  {item.to}
+                </p>
+                <ul className="list-disc list-inside pl-2 mt-2">
+                  {item.description.map((description, index) => (
+                    <li key={index}>{description}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
         <div className="w-full flex flex-col gap-6">
