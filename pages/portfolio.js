@@ -24,12 +24,28 @@ export default function Portfolio() {
       link: "https://deastudio.de/",
     },
     {
+      title: "Grobarchitekten",
+      image: "/images/portfolio/grobarchitekten.jpg",
+      style:
+        "text-[#16171b] border-[#16171b] shadow-md shadow-[#16171b80] hover:bg-[#16171b] hover:text-white",
+      label: "Live Demo",
+      link: "https://grobarchitekten.ch/",
+    },
+    {
       title: "Creation Bois",
       image: "/images/portfolio/creationbois-cover.jpg",
       style:
         "text-[#584637] border-[#584637] shadow-md shadow-[#58463780] hover:bg-[#584637] hover:text-white",
       label: "Live Demo",
       link: "https://creationbois.ch/",
+    },
+    {
+      title: "Infra3D by iNovitas",
+      image: "/images/portfolio/inovitas.jpg",
+      style:
+        "text-[#054263] border-[#054263] shadow-md shadow-[#05426380] hover:bg-[#054263] hover:text-white",
+      label: "Live Demo",
+      link: "https://landing.infra3d.com/",
     },
     {
       title: "Fight4Cure",
@@ -151,7 +167,7 @@ export default function Portfolio() {
     },
     {
       title: "Checkers",
-      image: "/images/games/checkers.png",
+      image: "/images/games/checkers.jpg",
       style:
         "text-[#ccc3c2] border-[#ccc3c2] shadow-md shadow-[#ccc3c2] hover:bg-[#ccc3c2] hover:text-white",
       label: "Live Demo",
@@ -159,7 +175,7 @@ export default function Portfolio() {
     },
     {
       title: "Sudoku",
-      image: "/images/games/sudoku.png",
+      image: "/images/games/sudoku.jpg",
       style:
         "text-[#bdbdbd] border-[#dee2e3] shadow-md shadow-[#dee2e3] hover:bg-[#0e0e0ee0] hover:text-white",
       label: "Live Demo",
@@ -167,7 +183,7 @@ export default function Portfolio() {
     },
     {
       title: "Dart",
-      image: "/images/games/dart.png",
+      image: "/images/games/dart.jpg",
       style:
         "text-[#010101] border-[#9a9a9a] shadow-md shadow-[#9a9a9a] hover:bg-[#1f1f1fe0] hover:text-white",
       label: "Live Demo",
