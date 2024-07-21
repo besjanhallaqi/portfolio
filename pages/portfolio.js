@@ -1,11 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import DefaultLayout from "../layouts/DefaultLayout";
 
 export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState("webs");
-
   const portfolioItems = [
     {
       title: "Proview360",
@@ -30,6 +27,14 @@ export default function Portfolio() {
         "text-[#16171b] border-[#16171b] shadow-md shadow-[#16171b80] hover:bg-[#16171b] hover:text-white",
       label: "Live Demo",
       link: "https://grobarchitekten.ch/",
+    },
+    {
+      title: "Labi Band",
+      image: "/images/portfolio/labi-band.jpg",
+      style:
+        "text-[#1b1a1f] border-[#1b1a1f] shadow-md shadow-[#1b1a1f80] hover:bg-[#1b1a1f] hover:text-white",
+      label: "Live Demo",
+      link: "https://labibend.netlify.app",
     },
     {
       title: "Creation Bois",
@@ -191,133 +196,57 @@ export default function Portfolio() {
     },
   ];
 
+  const sections = [
+    { title: "Webs", list: portfolioItems },
+    { title: "Wordpress", list: wordpressItems },
+    { title: "Games", list: gamesItems },
+  ];
+
   return (
     <DefaultLayout footerStyle="mt-auto">
-      <div className="w-10/12 lg:w-full h-full container mx-auto flex flex-row overflow-x-auto gap-2 lg:gap-6 pt-20 pb-2 mb-6 lg:mb-12">
-        <button
-          type="button"
-          onClick={() => setActiveTab("webs")}
-          className={`${
-            activeTab === "webs"
-              ? "border-[#444] text-[#444]"
-              : "border-[#b8b8b8] text-[#b8b8b8] hover:border-[#444] hover:text-[#444]"
-          } py-2 px-4 border-2 font-semibold rounded-lg transition duration-200 uppercase whitespace-nowrap`}
-        >
-          Webs
-        </button>
-        <button
-          type="button"
-          onClick={() => setActiveTab("wordpress")}
-          className={`${
-            activeTab === "wordpress"
-              ? "border-[#444] text-[#444]"
-              : "border-[#b8b8b8] text-[#b8b8b8] hover:border-[#444] hover:text-[#444]"
-          } py-2 px-4 border-2 font-semibold rounded-lg transition duration-200 uppercase whitespace-nowrap`}
-        >
-          WordPress
-        </button>
-        <button
-          type="button"
-          onClick={() => setActiveTab("games")}
-          className={`${
-            activeTab === "games"
-              ? "border-[#444] text-[#444]"
-              : "border-[#b8b8b8] text-[#b8b8b8] hover:border-[#444] hover:text-[#444]"
-          } py-2 px-4 border-2 font-semibold rounded-lg transition duration-200 uppercase whitespace-nowrap`}
-        >
-          Games
-        </button>
+      <div className="mt-12 lg:mt-20">
+        {sections.map((section) => (
+          <>
+            <div className="w-10/12 lg:w-full h-full container mx-auto flex flex-row overflow-x-auto gap-2 lg:gap-6 pb-2 mb-6 lg:mb-12">
+              <div class="w-full flex items-center gap-4 lg:gap-8 overflow-hidden whitespace-nowrap">
+                <hr className="w-[5%] min-w-[50px] border-2 border-[#444]" />
+                <p className="text-3xl font-semibold text-[#444]">
+                  {section.title}
+                </p>
+                <hr className="flex-1 border-2 border-[#444]" />
+              </div>
+            </div>
+            <div className="w-10/12 lg:w-full h-full container mx-auto grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 gap-16 pb-20">
+              {section.list.map((item, index) => (
+                <div
+                  key={index}
+                  className="w-full h-full flex flex-col items-center justify-between"
+                >
+                  <Image
+                    alt={item.title}
+                    src={item.image}
+                    width="800"
+                    height="533"
+                    className="rounded-2xl object-cover h-full"
+                  />
+                  <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
+                    <h2 className="lg:w-auto xl:truncate text-3xl font-bold text-[#444444]">
+                      {item.title}
+                    </h2>
+                    <Link
+                      href={item.link}
+                      target={item.link === "" ? "" : "_blank"}
+                      className={`${item.style} py-2 px-4 border-2 font-semibold rounded-lg transition duration-200 whitespace-nowrap`}
+                    >
+                      {item.label}
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        ))}
       </div>
-      {activeTab === "webs" && (
-        <div className="w-10/12 lg:w-full h-full container mx-auto grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 gap-16 pb-20">
-          {portfolioItems.map((item, index) => (
-            <div
-              key={index}
-              className="w-full h-full flex flex-col items-center justify-between"
-            >
-              <Image
-                alt={item.title}
-                src={item.image}
-                width="800"
-                height="533"
-                className="rounded-2xl object-cover h-full"
-              />
-              <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
-                <h2 className="lg:w-auto xl:truncate text-3xl font-bold text-[#444444]">
-                  {item.title}
-                </h2>
-                <Link
-                  href={item.link}
-                  target={item.link === "" ? "" : "_blank"}
-                  className={`${item.style} py-2 px-4 border-2 font-semibold rounded-lg transition duration-200 whitespace-nowrap`}
-                >
-                  {item.label}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-      {activeTab === "wordpress" && (
-        <div className="w-10/12 lg:w-full h-full container mx-auto grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 gap-16 pb-20">
-          {wordpressItems.map((item, index) => (
-            <div
-              key={index}
-              className="w-full h-full flex flex-col items-center justify-between"
-            >
-              <Image
-                alt={item.title}
-                src={item.image}
-                width="800"
-                height="533"
-                className="rounded-2xl object-cover h-full"
-              />
-              <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
-                <h2 className="lg:w-auto xl:truncate text-3xl font-bold text-[#444444]">
-                  {item.title}
-                </h2>
-                <Link
-                  href={item.link}
-                  target={item.link === "" ? "" : "_blank"}
-                  className={`${item.style} py-2 px-4 border-2 font-semibold rounded-lg transition duration-200 whitespace-nowrap`}
-                >
-                  {item.label}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-      {activeTab === "games" && (
-        <div className="w-10/12 lg:w-full h-full container mx-auto grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 gap-16 pb-20">
-          {gamesItems.map((item, index) => (
-            <div
-              key={index}
-              className="w-full h-full flex flex-col items-center justify-between"
-            >
-              <Image
-                alt={item.title}
-                src={item.image}
-                width="800"
-                height="533"
-                className="rounded-2xl object-cover h-full"
-              />
-              <div className="w-full flex flex-col lg:flex-row justify-between gap-2 items-center px-4 mt-4">
-                <h2 className="lg:w-auto xl:truncate text-3xl font-bold text-[#444444]">
-                  {item.title}
-                </h2>
-                <Link
-                  href={item.link}
-                  target={item.link === "" ? "" : "_blank"}
-                  className={`${item.style} py-2 px-4 border-2 font-semibold rounded-lg transition duration-200 whitespace-nowrap`}
-                >
-                  {item.label}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
     </DefaultLayout>
   );
 }
