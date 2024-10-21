@@ -37,6 +37,14 @@ export default function Portfolio() {
       link: "https://labibend.netlify.app",
     },
     {
+      title: "Bolengasse",
+      image: "/images/portfolio/bolengasse.jpg",
+      style:
+        "text-[#b19b8e] border-[#b19b8e] shadow-md shadow-[#b19b8e80] hover:bg-[#b19b8e] hover:text-white",
+      label: "Live Demo",
+      link: "https://bolengasse.ch/",
+    },
+    {
       title: "Creation Bois",
       image: "/images/portfolio/creationbois-cover.jpg",
       style:
