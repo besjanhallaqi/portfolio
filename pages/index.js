@@ -3,12 +3,13 @@ import Image from "next/image";
 import { GrLocation } from "react-icons/gr";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaBirthdayCake } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <DefaultLayout>
       <div className="w-10/12 mx-auto py-24 lg:py-0 lg:w-full h-full flex flex-col lg:flex-row gap-12 items-center justify-center">
-        <div className="w-auto m-4 md:m-0 md:w-96 overflow-hidden aspect-square border-8 border-[#b8b8b8] rounded-full bg-[#b8b8b8]">
+        <div className="w-full m-4 md:m-0 md:w-96 overflow-hidden aspect-square border-8 border-[#b8b8b8] rounded-full bg-[#b8b8b8]">
           <Image
             width={600}
             height={600}
@@ -33,15 +34,20 @@ export default function Home() {
               <GrLocation className="text-[#444] text-[24px]" />
               <p>12000 Fushë-Kosovë, Kosovë</p>
             </div>
-            <div className="flex gap-4 font-regular text-lg items-center">
+            <Link
+              href="mailto:besjan_hallaqi@hotmail.com"
+              className="flex gap-4 font-regular text-lg items-center group"
+            >
               <HiOutlineMail className="text-[#444] text-[24px]" />
-              <p>besjan_hallaqi@hotmail.com</p>
-            </div>
+              <p className="group-hover:underline">
+                besjan_hallaqi@hotmail.com
+              </p>
+            </Link>
             <div className="mt-4">
               <a
                 target="_blank"
                 className="py-2 px-4 border-2 border-[#444] rounded-lg text-lg font-semibold text-[#444] hover:border-white hover:bg-[#b8b8b8] hover:text-white"
-                href="../cv/CV-Besjan Hallaqi.pdf"
+                href="../cv/CV-Besjan-Hallaqi.pdf"
               >
                 View CV
               </a>

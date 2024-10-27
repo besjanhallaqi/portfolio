@@ -3,7 +3,7 @@ export const cv = {
   surname: "Hallaqi",
   image_url: "/images/me.jpg",
   email: "besjan_hallaqi@hotmail.com",
-  website_url: "besjan-hallaqi-portfolio.netlify.app",
+  website_url: "besjanhallaqi.com",
   birthday: "18/06/1999",
   phone_number: "+383 49 840 037",
   address: "12000 Fushë Kosovë, Kosovë",

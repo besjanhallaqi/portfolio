@@ -228,7 +228,11 @@ export default function Portfolio() {
               {section.list.map((item, index) => (
                 <div
                   key={index}
-                  className="w-full h-full flex flex-col items-center justify-between"
+                  className={`w-full h-full flex flex-col items-center justify-between ${
+                    section.list.length % 3 === 1 &&
+                    index === section.list.length - 1 &&
+                    "xl:col-start-2"
+                  }`}
                 >
                   <Image
                     alt={item.title}
