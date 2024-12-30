@@ -152,6 +152,14 @@ export default function Portfolio() {
       link: "https://www.les-terrasses-de-valbirse.ch/",
     },
     {
+      title: "JJAutomobile",
+      image: "/images/wordpress/jjautomobile.jpg",
+      style:
+        "text-[#10101b] border-[#10101b] shadow-md shadow-[#10101b80] hover:bg-[#10101b] hover:text-white",
+      label: "Live Demo",
+      link: "https://jjautomobile.ch/",
+    },
+    {
       title: "Michel Wolf",
       image: "/images/wordpress/michelwolf.jpg",
       style:
