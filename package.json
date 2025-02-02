@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.14",
     "next": "13.0.2",
     "next-seo": "^6.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "react-to-print": "^2.14.15"
+    "react-to-print": "^2.14.15",
+    "three": "^0.173.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

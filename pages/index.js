@@ -43,7 +43,7 @@ export default function Home() {
                 besjan_hallaqi@hotmail.com
               </p>
             </Link>
-            <div className="mt-4">
+            <div className="flex gap-4 mt-2">
               <a
                 target="_blank"
                 className="py-2 px-4 border-2 border-[#444] rounded-lg text-lg font-semibold text-[#444] hover:border-white hover:bg-[#b8b8b8] hover:text-white"
@@ -51,6 +51,13 @@ export default function Home() {
               >
                 View CV
               </a>
+              <Link
+                target="_blank"
+                className="py-2 px-4 border-2 border-[#444] rounded-lg text-lg font-semibold text-[#444] hover:border-white hover:bg-[#b8b8b8] hover:text-white"
+                href="/3d"
+              >
+                Portfolio 3D
+              </Link>
             </div>
           </div>
         </div>
