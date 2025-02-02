@@ -5,7 +5,7 @@ import {
   PerspectiveCamera,
   Preload,
 } from "@react-three/drei";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Scene from "../components/Scene";
 import WhiteLight from "../components/WhiteLight";
 
@@ -138,65 +138,92 @@ export default function Home() {
     rotationRight: [0, -2.361, -0.05],
   };
 
+  const [landscapeMode, setLandscapeMode] = useState(false);
+
+  useEffect(() => {
+    const checkOrientation = () => {
+      const isWideScreen = window.innerWidth > 1023;
+      const isMobileLandscape =
+        window.screen.orientation?.type.includes("landscape") ||
+        window.innerWidth > window.innerHeight;
+
+      setLandscapeMode(isWideScreen || isMobileLandscape);
+    };
+    checkOrientation();
+    window.addEventListener("resize", checkOrientation);
+    window.addEventListener("orientationchange", checkOrientation);
+    return () => {
+      window.removeEventListener("resize", checkOrientation);
+      window.removeEventListener("orientationchange", checkOrientation);
+    };
+  }, []);
+
   return (
     <div className="w-full h-screen relative">
-      <Canvas className="bg-black">
-        <Suspense
-          fallback={
-            <Html>
-              <div className="flex items-center justify-center h-full">
-                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-gray-500"></div>
-              </div>
-            </Html>
-          }
-        >
-          <PerspectiveCamera makeDefault position={[0, 0, 9]} fov={60} />
-          <mesh position={[0, 0, 0]}>
-            <Scene
-              color="milk"
-              positionX={-5}
-              positionZ={5}
-              icons={studyIcons}
-              description={studyDescription}
-              rotationIcons={6.2}
+      {!landscapeMode && (
+        <div className="rotate-message fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black text-white text-lg">
+          Please rotate your device to landscape mode.
+        </div>
+      )}
+      {landscapeMode && (
+        <Canvas className="bg-black">
+          <Suspense
+            fallback={
+              <Html>
+                <div className="flex items-center justify-center h-full">
+                  <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-gray-500"></div>
+                </div>
+              </Html>
+            }
+          >
+            <PerspectiveCamera makeDefault position={[0, 0, 9]} fov={60} />
+            <mesh position={[0, 0, 0]}>
+              <Scene
+                color="milk"
+                positionX={-5}
+                positionZ={5}
+                icons={studyIcons}
+                description={studyDescription}
+                rotationIcons={6.2}
+              />
+              <Scene
+                color="grey"
+                positionX={0}
+                positionZ={0}
+                description={skillsDescription}
+                icons={skillsIcons}
+                rotationIcons={1.5}
+              />
+              <Scene
+                color="lightGrey"
+                positionX={-5}
+                positionZ={-5}
+                icons={jobIcons}
+                description={jobsDescription}
+                rotationIcons={9.2}
+              />
+              <Scene
+                color="darkGrey"
+                positionX={-10}
+                positionZ={0}
+                icons={doingIcons}
+                description={doingDescription}
+                rotationIcons={4.8}
+              />
+            </mesh>
+            <WhiteLight />
+            <OrbitControls
+              enableRotate={true}
+              target={[0, 0, 0]}
+              minDistance={8}
+              maxDistance={9}
+              minPolarAngle={1.572}
+              maxPolarAngle={1.572}
             />
-            <Scene
-              color="grey"
-              positionX={0}
-              positionZ={0}
-              description={skillsDescription}
-              icons={skillsIcons}
-              rotationIcons={1.5}
-            />
-            <Scene
-              color="lightGrey"
-              positionX={-5}
-              positionZ={-5}
-              icons={jobIcons}
-              description={jobsDescription}
-              rotationIcons={9.2}
-            />
-            <Scene
-              color="darkGrey"
-              positionX={-10}
-              positionZ={0}
-              icons={doingIcons}
-              description={doingDescription}
-              rotationIcons={4.8}
-            />
-          </mesh>
-          <WhiteLight />
-          <OrbitControls
-            enableRotate={true}
-            target={[0, 0, 0]}
-            minDistance={8}
-            maxDistance={9}
-            minPolarAngle={1.572}
-            maxPolarAngle={1.572}
-          />
-          <Preload all />
-        </Suspense>
-      </Canvas>
+            <Preload all />
+          </Suspense>
+        </Canvas>
+      )}
     </div>
   );
 }
