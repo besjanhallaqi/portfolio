@@ -73,8 +73,8 @@ export default function Portfolio() {
       image: "/images/portfolio/strofulla-cover.jpg",
       style:
         "text-[#878787] border-[#878787] shadow-md shadow-[#87878780] hover:bg-[#878787] hover:text-white",
-      label: "Live Demo",
-      link: "https://strofulla.com/",
+      label: "Inactive",
+      link: "",
     },
     {
       title: "Neuron",
@@ -184,7 +184,7 @@ export default function Portfolio() {
       style:
         "text-[#b8babc] border-[#b8babc] shadow-md shadow-[#b8babc80] hover:bg-[#b8babc] hover:text-white",
       label: "Live Demo",
-      link: "https://luaj.live/",
+      link: "https://wordle-al.netlify.app/",
     },
     {
       title: "Checkers",
