@@ -156,20 +156,6 @@ export default function CV() {
                 {item.level}
               </p>
             ))}
-            <p className="italic font-semibold mt-4 text-2xl">Education</p>
-            {cv.education.map((item, index) => (
-              <div key={index} className={`${index === 0 ? "mt-1" : "mt-3"} `}>
-                <p>
-                  <b>{item.degree}</b> for <b>{item.education_title}</b>
-                </p>
-                <p>
-                  At <b>{item.college_name}</b>
-                </p>
-                <p>
-                  {item.from} - {item.to}
-                </p>
-              </div>
-            ))}
           </div>
           <div className="w-[65%] h-full pt-12 px-8 text-[#444]">
             <p className="italic tracking-wider leading-tight text-[56px] ">
@@ -185,9 +171,28 @@ export default function CV() {
               className="mt-1 text-sm"
               dangerouslySetInnerHTML={{ __html: cv.description_of_me }}
             ></p>
+            <p className="italic font-semibold mt-4 text-2xl">Education</p>
+            {cv.education.map((item, index) => (
+              <div key={index} className={`${index === 0 ? "mt-1" : "mt-3"} `}>
+                <p>
+                  <b>{item.degree}</b> for <b>{item.education_title}</b>
+                </p>
+                <p>
+                  At <b>{item.college_name}</b>
+                </p>
+                <p>
+                  {item.from} - {item.to}
+                </p>
+              </div>
+            ))}
             <p className="italic font-semibold mt-4 text-2xl">Experience</p>
             {cv.experience.map((item, index) => (
-              <div key={index} className={`${index === 0 ? "mt-1" : "mt-3"} `}>
+              <div
+                key={index}
+                className={`${index === 0 ? "mt-1" : "mt-3"} ${
+                  index === 2 && "mt-40 pt-20"
+                } `}
+              >
                 <p>
                   <b>{item.your_role}</b> at <b>{item.company_name}</b>
                 </p>

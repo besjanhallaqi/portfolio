@@ -224,7 +224,7 @@ export default function Portfolio() {
         {sections.map((section) => (
           <>
             <div className="w-10/12 lg:w-full h-full container mx-auto flex flex-row overflow-x-auto gap-2 lg:gap-6 pb-2 mb-6 lg:mb-12">
-              <div class="w-full flex items-center gap-4 lg:gap-8 overflow-hidden whitespace-nowrap">
+              <div className="w-full flex items-center gap-4 lg:gap-8 overflow-hidden whitespace-nowrap">
                 <hr className="w-[5%] min-w-[50px] border-2 border-[#444]" />
                 <p className="text-3xl font-semibold text-[#444]">
                   {section.title}

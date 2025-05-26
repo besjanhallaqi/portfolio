@@ -84,10 +84,24 @@ export default function AboutMe() {
 
   const jobs = [
     {
+      title: "hellocare.ai",
+      website: "https://hellocare.ai/",
+      from: "05/2025",
+      to: "Current",
+      description: [
+        "Developing scalable and maintainable applications using React and TypeScript",
+        "Implementing responsive UI components with CSS Modules and SCSS for better styling control",
+        "Building reusable components and hooks to ensure consistency and code reusability",
+        "Collaborating closely with cross-functional teams in an Agile development process",
+        "Participating in sprint planning, code reviews, and feature discussions",
+        "Troubleshooting and resolving UI issues across various devices and browsers",
+      ],
+    },
+    {
       title: "Visiar HealthCare",
       website: "https://visiar.nl/",
       from: "03/2024",
-      to: "Current",
+      to: "04/2025",
       description: [
         "Working with ReactJS, NextJS, TypeScript and TailwindCSS for better user experience",
         "Creating scalable applications",

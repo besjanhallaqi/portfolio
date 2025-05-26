@@ -12,8 +12,22 @@ export const cv = {
     "Passionate Front-End Developer with expertise in React.js, dedicated to creating responsive and user-friendly web applications. Proficient in modern web technologies, I blend creativity and technical prowess to deliver engaging digital experiences. Committed to continuous learning and collaboration with cross-functional teams to drive innovation in web development.",
   experience: [
     {
-      from: "03/2024",
+      from: "05/2025",
       to: "Current",
+      company_name: "hellocare.ai",
+      your_role: "Front-end developer",
+      your_responsibilities: [
+        "Developing scalable and maintainable applications using React and TypeScript",
+        "Implementing responsive UI components with CSS Modules and SCSS for better styling control",
+        "Building reusable components and hooks to ensure consistency and code reusability",
+        "Collaborating closely with cross-functional teams in an Agile development process",
+        "Participating in sprint planning, code reviews, and feature discussions",
+        "Troubleshooting and resolving UI issues across various devices and browsers",
+      ],
+    },
+    {
+      from: "03/2024",
+      to: "04/2025",
       company_name: "Visiar HealthCare",
       your_role: "Front-end developer",
       your_responsibilities: [
@@ -55,17 +69,17 @@ export const cv = {
         "Staying up-to-date on technology",
       ],
     },
-    // {
-    //   from: "07/2020",
-    //   to: "10/2020",
-    //   company_name: "ProCredit Bank",
-    //   your_role: "Intern",
-    //   your_responsibilities: [
-    //     "Finished Internship for MIS department in bank",
-    //     "Created reports from database to the all departments in the bank",
-    //     "Used queries in MSSQL for generating reports",
-    //   ],
-    // },
+    {
+      from: "07/2020",
+      to: "10/2020",
+      company_name: "ProCredit Bank",
+      your_role: "Intern",
+      your_responsibilities: [
+        "Finished Internship for MIS department in bank",
+        "Created reports from database to the all departments in the bank",
+        "Used queries in MSSQL for generating reports",
+      ],
+    },
   ],
   education: [
     {
