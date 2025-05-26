@@ -15,7 +15,7 @@ export default function Dasma() {
       return;
     }
 
-    const clientId = "3f482672556e428";
+    const clientId = "51eabf8f61811b7";
     setStatus("Uploading...");
     const uploaded = [];
 
